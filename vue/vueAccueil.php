@@ -46,7 +46,6 @@
                                         <p class='text_ville_2'><?= htmlspecialchars($voyage['textVille2']) ?></p>
                                         <p class='text_ville_3'><?= htmlspecialchars($voyage['textVille3']) ?></p>
                                         <button class="reserverVol" data-destination=<?= htmlspecialchars($voyage['pays']) ?> data-ville="<?= htmlspecialchars($voyage['ville']) ?>" data-prix=<?= htmlspecialchars($voyage['prix']) ?> data-username=<?= htmlspecialchars($_SESSION['username']) ?>>Réserver un vol</button>
-                                        <img id="loadingGif" src="images/Internal/check.gif" alt="Chargement..." style="display: none; width: 100px;">
                                     </div>
                                 </div>
                                 </br>
