@@ -63,4 +63,11 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-
+// Vérification connexion
+document.querySelectorAll('.reserverVol').forEach(button => {
+    button.addEventListener('click', function() {
+        if (button.getAttribute('data-username') === '') {
+            window.location.href = '/controleur/monCompte.php';
+        }
+    });
+});
