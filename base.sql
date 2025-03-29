@@ -42,6 +42,11 @@ CREATE TABLE IF NOT EXISTS reservations (
 );
 
 
+INSERT INTO users(username, password, firstName, lastName, address, phoneNumber, postalCode, role) VALUES
+("Hybris.Kappa","$2y$10$7dbSE.hs30T8bp83UZgotemLK94tEQ7LqnYT0Id5b0SCeMUSqmwMy", "Hybris", "Kappa", "64 Rue du Khéops", "06 15 64 78 18", "75001", "User"),
+("Athéna.Kappa","$2y$10$tSuDxnPlrRqQcK47Z/Pws.vxyKLAmeWo8Rysb1UWuvUEYAEwuHuoy", "Athéna", "Kappa", "25 Boulevard du Gecko", "06 59 16 85 45", "75017", "Admin");
+
+
 INSERT INTO catalogueDirector (name, fileNameImages) VALUES
 ("France", "images/France/paysFrance.jpg"),
 ("Maroc", "images/Maroc/paysMaroc.jpg"),
