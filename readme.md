@@ -37,6 +37,12 @@ mysql -u root
 source /var/www/html/base.sql;
 ```
 
+### PS : Deux compte sont déjà créé pour une démo
+
+> Username : Hybris.Kappa Password : Hybris1! Role : User
+> 
+> Username : Athéna.Kappa Password : Athéna1! Role : Admin
+
 L'application est prête !
 
 # Documentaion :
