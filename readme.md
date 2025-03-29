@@ -44,10 +44,8 @@ L'application est prête !
 
 MCD :
 
-![image](https://github.com/user-attachments/assets/7ade54c0-6b81-40bd-a43b-435fcbcd3d21)
+![image](https://github.com/user-attachments/assets/24735856-ded6-4033-bfdd-23f8d5a96a3b)
 
 UseCases :
 
 ![image](https://github.com/user-attachments/assets/2b2981e7-3de8-42fb-9770-865a7c59a2bc)
-
-
