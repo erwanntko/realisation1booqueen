@@ -36,38 +36,13 @@ image.addEventListener('click', () => {
 });
 });
 
-// Animation clique chek
-document.addEventListener("DOMContentLoaded", function () {
-    const boutons = document.querySelectorAll(".reserverVol");
-
-    boutons.forEach(bouton => {
-        bouton.addEventListener("click", function () {
-            // Vérifier si le bouton a déjà été cliqué
-            if (this.dataset.clicked) return;
-
-            this.dataset.clicked = "true"; // Marquer comme cliqué
-
-            const destination = this.dataset.destination;
-            const ville = this.dataset.ville;
-            const prix = this.dataset.prix;
-            const username = this.dataset.username;
-
-            console.log(`Réservation pour ${username} : ${ville}, ${destination} à ${prix}€`);
-
-            // Sauvegarder le texte original au cas où
-            this.dataset.originalText = this.innerHTML;
-
-            // Afficher l'animation du texte "Réservé"
-            this.innerHTML = "<span class='textAnim'>Réservé</span><span class='checkAnim'>✔</span>";
-        });
-    });
-});
-
-// Vérification connexion
+// Vérification connexion + check notification
 document.querySelectorAll('.reserverVol').forEach(button => {
     button.addEventListener('click', function() {
         if (button.getAttribute('data-username') === '') {
             window.location.href = '/controleur/monCompte.php';
+        } else {
+            this.innerHTML = "<span class='textAnim'>Réservé</span><span class='checkAnim'>✔</span>";
         }
     });
 });
