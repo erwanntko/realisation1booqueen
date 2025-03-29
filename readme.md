@@ -1,46 +1,45 @@
-> Installation :
+# Installation :
 
 Ce Projet en structure MVC tourne sur une AMI 2 sur AWS toutes les caractéristiques des logicielles sont en dessous l'application peut également marcher en local avec de possible bug de formatage de texte.
 
-Pré Requis :
+### Pré Requis :
 
-AWS EC2
+> AWS EC2
 
-PHP 7.2
+> PHP 7.2
 
-MariaDB 10.2
+> MariaDB 10.2
 
-Appache 2.4.62
+> Appache 2.4.62
 
-Sur AMI 2 :
+### Userdata pour l'installation des logicielles et du code sur Amazon Linux 2
 
+```
 #!/bin/bash
 yum update -y
 amazon-linux-extras install -y lamp-mariadb10.2-php7.2 php7.2
-yum install -y httpd mariadb-server
+yum install -y httpd mariadb-server git
 systemctl start httpd
 systemctl enable httpd
+sudo systemctl start mariadb
+sudo systemctl enable mariadb
 usermod -a -G apache ec2-user
 chown -R ec2-user:apache /var/www
 chmod 2775 /var/www
 find /var/www -type d -exec chmod 2775 {} \;
 find /var/www -type f -exec chmod 0664 {} \;
-
-Télécharger le code
-
-Lancer l'EC2
-
-Exécuter les comandes pour la BDD :
-
-Se mettre sur le dossier **/www/** en local ou le **/html/** sur AWS
-
+cd /var/www/html
+git clone https://github.com/erwanntko/realisation1booqueen.git .
+```
+### Mise en place de la base de donnée
+```
 mysql -u root
-
-source base.sql;
+source /var/www/html/base.sql;
+```
 
 L'application est prête !
 
-> Documentaion :
+# Documentaion :
 
 MCD :
 
